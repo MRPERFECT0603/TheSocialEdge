@@ -40,7 +40,7 @@ const addPost = (req, res) => {
     jwt.verify(token, "secretKey", (err, UserInfo) => {
         if (err) return res.status(403).json("Token is not valid!!!");
 
-        const q = "INSERT INTO posts(`desc` , `img` , `userId`, `createdAt` ) VALUES (?)";
+        const q = "INSERT INTO posts(`descp` , `img` , `userId`, `createdAt` ) VALUES (?)";
 
         const values = [
             req.body.desc,
