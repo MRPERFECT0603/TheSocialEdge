@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 });
 app.use(express.json());
 
-app.use(cors({ origin: "the-social-edge-client.vercel.app" }));
+app.use(cors({ origin: "https://the-social-edge-client.vercel.app" }));
 
 app.use(cookieParser());
 
