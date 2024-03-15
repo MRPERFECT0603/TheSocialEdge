@@ -13,7 +13,7 @@ export const AuthContextProvider = ({ children }) => {
   const login = async (inputs) => {
     try {
       setLoading(true);
-      const res = await axios.post("http://127.0.0.1:8000/api/auth/login", inputs, {
+      const res = await axios.post("https://thesocialedge-api.onrender.com/api/auth/login", inputs, {
         withCredentials: true,
         credentials: 'include',
       });
