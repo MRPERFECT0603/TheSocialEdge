@@ -49,7 +49,7 @@ const login = (req, res) => {
         const { password, ...others } = data[0];
 
         res.cookie("accessToken", token, {
-            httpOnly: true,
+            // httpOnly: true,
             secure: true,
             samesite: "none"
         }).status(200).json(others);
