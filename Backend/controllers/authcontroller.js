@@ -50,6 +50,7 @@ const login = (req, res) => {
 
         res.cookie("accessToken", token, {
             httpOnly: true,
+            secure: true,
             samesite: "none"
         }).status(200).json(others);
     });
