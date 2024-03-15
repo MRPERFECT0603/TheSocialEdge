@@ -50,7 +50,7 @@ app.use(cookieParser());
 
 app.get("/" , (req,res) => {
   res.send("Vivek Shaurya");
-}
+});
         
 
 app.post("/api/upload", async (req, res) => {
