@@ -20,7 +20,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://127.0.0.1:8000/api/auth/register", inputs);
+      await axios.post("https://thesocialedge-api.onrender.com/api/auth/register", inputs);
     } catch (err) {
       setErr(err.response.data);
     }
