@@ -27,7 +27,7 @@ const Posts = ({ userId }) => {
   const { isPending, error, data } = useQuery({
     queryKey: ['posts'], queryFn: () =>
 
-      makeRequest.get("/posts?userId=" + userId).then(res => {
+      makeRequest.get("/api/posts?userId=" + userId).then(res => {
         return res.data;
       })
 
