@@ -50,7 +50,7 @@ const Comments = ({postId}) => {
 
   const mutation = useMutation({
     mutationFn: (newComment)=>{
-      return makeRequest.post("/comments" , newComment);
+      return makeRequest.post("/api/comments" , newComment);
     },
     onSuccess: () => {
       // Invalidate and refetch
