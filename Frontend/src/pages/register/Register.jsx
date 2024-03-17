@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Register.scss";
-import axios from "axios";
+import { makeRequest } from "../../axios";
+
 
 const Register = () => {
   const [inputs, setInputs] = useState({
@@ -20,7 +21,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await axios.post("https://thesocialedge-api.onrender.com/api/auth/register", inputs);
+      await makeRequest.post("/auth/register", inputs);
     } catch (err) {
       setErr(err.response.data);
     }
