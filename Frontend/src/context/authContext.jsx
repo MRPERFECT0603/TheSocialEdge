@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { makeRequest } from "../../axios";
+import { makeRequest } from "../axios";
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
@@ -12,7 +12,7 @@ export const AuthContextProvider = ({ children }) => {
   const login = async (inputs) => {
     try {
       setLoading(true);
-      const res = await axios.post("https://thesocialedge-api.onrender.com/api/auth/login", inputs, {
+      const res = await makeRequest.post("/api/auth/login", inputs, {
         withCredentials: true,
         credentials: 'include',
       });
