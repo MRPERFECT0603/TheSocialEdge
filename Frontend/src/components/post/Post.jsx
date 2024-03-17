@@ -24,7 +24,7 @@ const Post = ({ post }) => {
   const { isPending, error, data } = useQuery({
     queryKey: ['likes', post.id], queryFn: () =>
 
-      makeRequest.get("/likes?postId=" + post.id).then(res => {
+      makeRequest.get("/api/likes?postId=" + post.id).then(res => {
         return res.data;
       })
 
