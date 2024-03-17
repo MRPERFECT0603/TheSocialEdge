@@ -20,7 +20,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await makeRequest.post("/auth/register", inputs);
+      await makeRequest.post("/api/auth/register", inputs);
     } catch (err) {
       setErr(err.response.data);
     }
