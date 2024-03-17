@@ -35,7 +35,7 @@ const Profile = () => {
   const { data: relationshipData } = useQuery({
     queryKey: ['relationship'], queryFn: () =>
 
-      makeRequest.get("/relationships?followedUserid=" + userId).then(res => {
+      makeRequest.get("/api/relationships?followedUserid=" + userId).then(res => {
         return res.data;
       })
 
