@@ -41,7 +41,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 // app.use(cors({ origin: "http://localhost:5173" }));
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://the-social-edge-client.vercel.app",
   credentials: true,
 }));
 
